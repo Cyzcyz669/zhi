@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>织 · 一卷画在绢上的绢</title>
+<meta name="description" content="传梁楷《蚕织图》（克利夫兰美术馆 1977.5）：这卷画画在绢上，画的正是绢怎么来的。">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top">
+  <div class="brand">織 <span>第一幕 · 喂</span></div>
+  <ol id="acts" aria-label="三幕"><li class="on">喂</li><li>缫</li><li>织</li><li>合</li></ol>
+</header>
+
+<main id="stage">
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <canvas id="cv" aria-label="《蚕织图》首段，可拖动和点按"></canvas>
+  <div id="hint" role="status"></div>
+</main>
+
+<section id="card" aria-live="polite">
+  <div id="steps" aria-label="楼璹织图题名"></div>
+  <p id="line"></p>
+  <p id="sub"></p>
+  <div id="btns"></div>
+</section>
+
+<footer id="honest">
+  <span>画：克利夫兰美术馆 1977.5（CC0），据馆方高清局部拼接</span>
+  <span class="tag shi">桑叶与蚕：示意 · 画中人动：今人加工</span>
+  <span class="tag he">蚕声：合成声音</span>
+  <button id="srcBtn" type="button">来源</button>
+</footer>
+
+<div id="intro">
+  <div class="in">
+    <p class="big">这是一卷绢。<br>它画的，是绢怎么来的。</p>
+    <p class="small">传梁楷《蚕织图》（馆方著录名：耕織圖）<br>南宋，13 世纪初，绢本设色，克利夫兰美术馆藏</p>
+    <button id="go" type="button">展开画卷</button>
+    <p class="small dim">有声音。iPhone 请关掉静音开关。</p>
+  </div>
+</div>
+
+<dialog id="src">
+  <h2>来源</h2>
+  <ul>
+    <li>画：克利夫兰美术馆 1977.5，传梁楷《蚕织图》（馆方著录名：耕織圖），CC0。首段由馆方高清局部 alt7–alt11 对齐拼接、统一色调（这一步是今人加工）。</li>
+    <li>“喂蚕、一眠、二眠、三眠”：南宋楼璹《耕织图诗》织图题名。诗原文：待补。</li>
+    <li>“或隱几假寐”：收藏者程琦 1972 年题跋，释读未经专家校核。</li>
+    <li>桑叶、蚕：示意动画，不是画里的东西，也不按真实大小。</li>
+    <li>蚕吃桑叶的声音：代码合成（参数按听感设定，不是录音）。</li>
+    <li>第二幕长条：馆方高清局部 alt14–alt16 对齐拼接（今人加工）。中间浅色竖条是原卷的装裱接缝。</li>
+    <li>“下簇、择茧、缫丝”：楼璹织图题名。“1975 年重裱成一卷”：据程琦题跋，我的释读。</li>
+    <li>茧丝长 600–1500 米、约八成可缫、粗 15–20 微米、8 粒并成一根生丝：FAO《Manual on sericulture》第 3 卷，今天的家蚕数字。</li>
+    <li>茧、丝线、缫车辐条与丝圈：示意动画。</li>
+    <li>纺车声：Freesound 785157（Vrymaa，CC0），近代羊毛纺车录音，不是宋代缫车。煮水声：Freesound 637936（kyles，CC0）。</li>
+    <li>画中人、树、火的动作：今人加工（原画像素按骨骼平滑位移，不抠图、不添笔），不是原画会动。</li>
+    <li>第三幕长条：馆方高清局部 alt17、alt18 对齐拼接（今人加工）。“络丝、经、纬、织”：楼璹织图题名。摇车女孩在络丝还是摇纬：待考。</li>
+    <li>织机：平素织机，单动式双综双蹑（中国丝绸博物馆说法）。经线、梭、筘、纬线、平纹小图：示意。经纬密度：待考。</li>
+    <li>真绢放大：馆方高清图 alt10 局部原像素。</li>
+    <li>织机声：Freesound 582994（snapcam，CC0）截两下当打纬、踏蹑（哪下是哪下是我按强弱猜的）；投梭声：Freesound 510266（Naïma，CC0）。都是近代织机录音。</li>
+    <li>丝线拖尾、蒸汽、火星、蚕蛾：示意小装饰。</li>
+    <li>尾“合”：馆方全卷图 1977.5_full（25776×2266 像素，含三段画与程琦题跋），原样切成瓦片，没有拼接、调色。三段的分界是我按装裱接缝量的。</li>
+    <li>“三段曾经分散，1972 年程琦只有首段，三年后另两段重现，1975 年重裱为一卷，‘為延津之合’”：据程琦跋一（壬子，1972）、跋二（乙卯桂月，1975）。释读是我的，有缺字，未经专家校。另两段之前在哪里：跋中缺字，待考。</li>
+    <li>“延津之合”典出《晋书》卷三十六张华传（雷焕、张华所得双剑，后在延平津化龙；已在维基文库核原文）。</li>
+    <li>三段分开、拖动拼合、接缝处的丝絮：示意动画，不是原卷真的这样摆过。合上的声音：Freesound 582994（snapcam，CC0）近代织机录音截的一下。</li>
+    <li>“约八百年前”：按馆方“南宋，13 世纪初”估算。</li>
+  </ul>
+  <form method="dialog"><button>关闭</button></form>
+</dialog>
+
+<script src="js/silkworm.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/life.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
